@@ -1,0 +1,60 @@
+<form id="myForm">
+        <div class="form-group">
+            <div class="my-container">
+                <label class="acct-text" for="AccountNumber"> Step 1 - Enter Account Number :</label>
+                <input type="text" class="form-control" id="account-number" placeholder="Account Number">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="year" for="Year">Step 2 - Select Statement Year(s) :</label>
+
+            <div id="checkboxes" class="grid-container2">
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years0</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years1</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years2</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years3</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years4</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years5</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years6</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years7</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years8</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years9</label>
+                <label><input id="chkBoxYear" type="checkbox" name="Year" value=""> @ViewBag.years10</label>
+            </div>
+            <button id="selection" class="select-all-years">Select All Years</button>
+            
+        </div>
+
+        <div class="form-group">
+            <p><label class="month-text">Step 3 - Select Statement(s) Month :</label></p>
+            <div id="checkboxes" class="grid-container">
+                <label><input id="month" type="checkbox" value=""> January</label>
+                <label><input id="month" type="checkbox" value=""> February</label>
+                <label><input id="month" type="checkbox" value=""> March</label>
+                <label><input id="month" type="checkbox" value=""> April</label>
+                <label><input id="month" type="checkbox" value=""> May</label>
+                <label><input id="month" type="checkbox" value=""> June</label>
+                <label><input id="month" type="checkbox" value=""> July</label>
+                <label><input id="month" type="checkbox" value=""> August</label>
+                <label><input id="month" type="checkbox" value=""> September</label>
+                <label><input id="month" type="checkbox" value=""> October</label>
+                <label><input id="month" type="checkbox" value=""> November</label>
+                <label><input id="month" type="checkbox" value=""> December</label>
+                @*<label for="checkall"><input type="button" id="checkall" value="check all" /></label>*@
+
+
+            </div>
+            <button id="selection" class="select-all">Select All Months</button>
+        </div>
+
+        <p><label for="AccountNumber">Step 4 - Select Delivery Method :</label></p>
+        <p><label><input type="radio" name="filedecision" id="download" /> Download Statemtents</label></p>
+        <p><label><input type="radio" name="filedecision" id="email" /> Email Statemtents</label></p>
+        <input type="text" class='txbx' hidden="hidden" />
+        <p class="message" hidden="hidden">* To send to multiple recipients, separate the email addresses using a comma "," </p>
+        <p class="message" hidden="hidden">* Statement(s) will be delivered via FMBSECURE</p>
+
+        <input type="submit" name="ctl00$MainContent$btnSubmit" value="Retrieve Statements" onclick="DisplayLoadingDiv();" id="main-content-submit" style="">
+
+    </form>
